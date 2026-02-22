@@ -1,6 +1,6 @@
 # Base16 Builder
 
-A Go implementation of a Base16 Builder that follows the guidelines at Base16.
+A Go implementation of a Base16 Builder that follows the guidelines at [Base16](https://github.com/chriskempson/base16).
 
 ## Installation
 
