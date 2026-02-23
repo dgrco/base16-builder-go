@@ -19,7 +19,7 @@ go install github.com/mxilinas/base16-builder-go/cmd/base16-builder@latest
 ```
 git clone https://github.com/mxilinas/base16-builder-go
 cd base16-builder-go
-go build -o base16-builder
+go build ./cmd/base16-builder
 ```
 *Note: You would need to run the binary using ./base16-builder*
 
