@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "base16-builder/colors"
+	. "github.com/mxilinas/base16-builder-go/colors"
 	"bufio"
 	"flag"
 	"fmt"

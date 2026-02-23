@@ -1,4 +1,4 @@
-module base16-builder
+module github.com/mxilinas/base16-builder-go
 
 go 1.25.7
 
