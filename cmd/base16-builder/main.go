@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "github.com/mxilinas/base16-builder-go/colors"
+	"github.com/mxilinas/base16-builder-go/internal/colors"
 	"bufio"
 	"flag"
 	"fmt"
@@ -42,13 +42,13 @@ func getTemplateTags(s map[string]string) map[string]string {
 	for key, val := range s {
 
 		tags[key+"-hex"] = val
-		tags[key+"-bgr"] = ReverseRgb(val)
+		tags[key+"-bgr"] = colors.ReverseRgb(val)
 
 		tags[key+"-hex-r"] = val[:2]
 		tags[key+"-hex-g"] = val[2:4]
 		tags[key+"-hex-b"] = val[4:6]
 
-		rgb := HexToRgb(val)
+		rgb := colors.HexToRgb(val)
 
 		tags[key+"-rgb-r"] = strconv.FormatUint(rgb.R, 10)
 		tags[key+"-rgb-g"] = strconv.FormatUint(rgb.G, 10)
@@ -58,7 +58,7 @@ func getTemplateTags(s map[string]string) map[string]string {
 		tags[key+"-dec-g"] = strconv.FormatFloat(float64(rgb.G)/255.0, 'f', 2, 64)
 		tags[key+"-dec-b"] = strconv.FormatFloat(float64(rgb.B)/255.0, 'f', 2, 64)
 
-		hsl := RgbToHsl(rgb)
+		hsl := colors.RgbToHsl(rgb)
 
 		tags[key+"-hsl-h"] = strconv.FormatFloat(hsl.H, 'f', 2, 64)
 		tags[key+"-hsl-s"] = strconv.FormatFloat(hsl.S, 'f', 2, 64)
